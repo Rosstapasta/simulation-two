@@ -15,16 +15,18 @@ class Login extends Component {
             password: '',
             user: []
         }
-        this.login = this.login.bind(this)
+        this.login = this.login.bind(this);
+        this.register = this.register.bind(this)
     }
 
     login(){
         axios.get(`/api/login?username=${this.state.username}`).then( (res)=> this.setState({user: res.data}))
-            
+            console.log(this.state)
     }
 
     register(){
         axios.put('/api/register', {username: this.state.username, password: this.state.password}).then( (res) => this.setState({user: res.data}))
+        console.log(this.state)
     }
 
 
@@ -54,7 +56,7 @@ class Login extends Component {
 
                         <Link to="/dashboard"><button onClick={this.login}>Login</button></Link>
                         
-                        <Link to="/dashboard"><button>Register</button></Link>
+                        <Link to="/dashboard"><button onClick={this.register}>Register</button></Link>
 
                 </div>
 
