@@ -1,0 +1,17 @@
+.main {
+    width: 50%;
+    height: 100vh;
+    min-height: 850px;
+    min-width: 850px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputbox {
+    width: 750px;
+    height: 30px;
+    font-size: 2rem;
+}
